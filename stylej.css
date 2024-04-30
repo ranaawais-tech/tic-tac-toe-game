@@ -1,0 +1,97 @@
+@import url(<linkhref="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&family=Ubuntu:wght@300&display=swap"rel="stylesheet">);
+* {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  background: rgb(110, 110, 185);
+  color: white;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 12px;
+  font-family: "Roboto Slab", serif;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  font-size: xx-large;
+}
+.gameContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.container {
+  display: grid;
+  grid-template-rows: repeat(3, 10vw);
+  grid-template-columns: repeat(3, 10vw);
+  font-family: "Roboto Slab", serif;
+}
+.line {
+  background-color: rgb(152, 133, 220);
+  height: 3px;
+  width: 0;
+  position: absolute;
+  transition: width 1s ease-in-out;
+}
+.box {
+  border: 2px solid black;
+  font-size: 8vw;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box:hover {
+  background-color: rgb(242, 160, 242);
+}
+.gameInfo {
+  padding: 0px 44px;
+  font-size: 25px;
+  font-family: "Roboto Slab", serif;
+}
+.gameInfo h1 {
+  font-size: 2.5rem;
+}
+.imgBox img {
+  width: 0;
+  transition: width 1s ease-in-out;
+}
+.bt {
+  border-top: 0;
+}
+.bb {
+  border-bottom: 0;
+}
+.br {
+  border-right: 0;
+}
+.bl {
+  border-left: 0;
+}
+#reset {
+  background-color: rgb(192, 167, 216);
+  cursor: pointer;
+  padding: 6px 13px;
+  margin: 0 23px;
+  border-radius: 12px;
+}
+@media screen and (max-width: 950px) {
+  .gameContainer {
+    flex-wrap: wrap;
+  }
+  .gameInfo {
+    margin-top: 35px;
+  }
+  .gameInfo h1 {
+    font-size: 1.5rem;
+  }
+  .container {
+    display: grid;
+    grid-template-rows: repeat(3, 20vw);
+    grid-template-columns: repeat(3, 20vw);
+  }
+}
